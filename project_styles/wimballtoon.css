@@ -1,0 +1,16 @@
+
+body.wimballtoon {
+  background: linear-gradient(135deg, #ff00cc 0%, #3333ff 100%);
+  color: #ffffff;
+  font-family: 'Press Start 2P', cursive;
+  text-shadow: 1px 1px #000;
+}
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #00ffff;
+  text-shadow: 3px 3px #ff00cc;
+}
+a {
+  color: #ffff00;
+}
