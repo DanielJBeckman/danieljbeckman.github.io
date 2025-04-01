@@ -1,16 +1,80 @@
 
 body.wimballtoon {
-  background: linear-gradient(135deg, #ff00cc 0%, #3333ff 100%);
-  color: #ffffff;
-  font-family: 'Press Start 2P', cursive;
-  text-shadow: 1px 1px #000;
+  background-color: #f2f3f5;
+  font-family: 'Segoe UI', sans-serif;
+  color: #2c2c2c;
+  margin: 0;
+  padding: 0;
 }
+
 h1 {
+  font-family: 'Rubik Mono One', sans-serif;
   font-size: 2.5rem;
   text-align: center;
-  color: #00ffff;
-  text-shadow: 3px 3px #ff00cc;
+  margin: 40px 0 20px;
+  color: #2c2c2c;
 }
-a {
-  color: #ffff00;
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+}
+
+.video-box, .info-box, .platform-box {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.video-box iframe {
+  width: 100%;
+  height: 300px;
+  border-radius: 8px;
+  border: none;
+}
+
+.platform-box {
+  grid-column: span 2;
+  text-align: center;
+  background-color: #f7f9fa;
+  font-size: 1rem;
+}
+
+.platform-box strong {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.screenshot-grid {
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.screenshot-grid img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.15);
+}
+
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 0.9rem;
+  color: #666;
 }
