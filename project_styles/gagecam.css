@@ -39,6 +39,6 @@ h1 {
   color: #2c3e50;
 }
 
-.d-block{
+.carousel-item {
   transform: translateY(-20%);
 }
