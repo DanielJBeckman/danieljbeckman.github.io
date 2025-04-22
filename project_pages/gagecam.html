@@ -1,70 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Gage-Cam</title>
-  <link rel="stylesheet" href="/style.css">
-  <link rel="stylesheet" href="/project_styles/gagecam.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gage-Cam • Project Overview</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Helvetica Neue', sans-serif;
+      background-color: #f8f9fa;
+      color: #212529;
+    }
+
+    .hero {
+      background-color: #e9ecef;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 720px;
+      margin: 1rem auto 0;
+      color: #555;
+    }
+
+    .section {
+      padding: 3rem 2rem;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .project-block {
+      margin-bottom: 5rem;
+    }
+
+    .project-img {
+      max-height: 300px;
+      width: auto;
+      height: auto;
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .text-block h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .text-block p {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    footer {
+      padding: 2rem 1rem;
+    }
+  </style>
 </head>
-<body class="gagecam">
-  <main>
+<body>
+
+  <!-- Hero Section -->
+  <section class="hero">
     <h1>Gage-Cam</h1>
-    <img src="/project_assets/Gagecam1.jpg" alt="Gage-Cam Title Image" class="title-image">
+    <p>AI-enabled river stage detection from staff plates using embedded systems and deep learning in the field.</p>
+  </section>
 
-    <div class="description">
-      <p><strong>Gage-Cam</strong> is an AI-powered river stage estimation system developed using a U-Net architecture trained on synthetic imagery. 
-      The model detects exposed staff plate heights from images to estimate water level. The system was built from Raspberry Pi components, 
-      solar powered, and capable of edge/cloud processing. Gage-Cam replaced an earlier prototype, Cambot, which used an adapted Eigenfaces method but suffered from drift.</p>
-      <p>This project included full hardware prototyping, field testing, optics analysis, and model refinement. All image training data was self-generated to simulate varied water levels, lighting, and distortion effects.</p>
-      <p><strong>Tech Used:</strong> Python · Keras · U-Net · OpenCV · Raspberry Pi · Synthetic Data · Edge Computing</p>
-    </div>
-
-  <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active" data-bs-interval="10000">
-      <img src="/project_assets/GageCam.png" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>First slide label</h5>
-        <p>Some representative placeholder content for the first slide.</p>
+  <!-- Staggered Content -->
+  <section class="section">
+    
+    <!-- Block 1 -->
+    <div class="row project-block align-items-center">
+      <div class="col-md-6">
+        <img src="/project_assets/Gagecam1.jpg" alt="Gage-Cam staff plate detection" class="project-img">
+      </div>
+      <div class="col-md-6">
+        <div class="text-block">
+          <h3>Overview</h3>
+          <p>Gage-Cam is a lightweight embedded vision system designed to detect staff plates and measure river stage using real-time computer vision. Built from Raspberry Pi hardware, it runs a U-Net model trained to identify the physical contour of staff plates and determine the waterline intersection point, enabling in-field elevation measurement without human reading.</p>
+        </div>
       </div>
     </div>
-    <div class="carousel-item" data-bs-interval="2000">
-      <img src="/project_assets/Gagecam4.png" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Second slide label</h5>
-        <p>Some representative placeholder content for the second slide.</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="/project_assets/Gagecam3.png" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Third slide label</h5>
-        <p>Some representative placeholder content for the third slide.</p>
-      </div>
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-  </main>
 
-  <footer>
-    <p><a href="/index.html">← Back to Projects</a></p>
-    <p>&copy; 2025 Daniel J. Beckman</p>
+    <!-- Block 2 -->
+    <div class="row project-block align-items-center flex-md-row-reverse">
+      <div class="col-md-6">
+        <img src="/project_assets/Gagecam2.png" alt="Field deployment of Gage-Cam" class="project-img">
+      </div>
+      <div class="col-md-6">
+        <div class="text-block">
+          <h3>Edge AI in Harsh Conditions</h3>
+          <p>Gage-Cam was trained using TensorFlow and Keras on a synthetic data pipeline capable of generating thousands of randomized scenes. With as few as 30 annotated images of a given object, the model could learn to identify that object’s mask in varied environments. The synthetic training data included a wide range of object orientations, lighting conditions, and backgrounds, enabling the U-Net to generalize across staff plate types and real-world complexity — critical for reliable performance in the field.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Block 3 -->
+    <div class="row project-block align-items-center">
+      <div class="col-md-6">
+        <img src="/project_assets/Gagecam3.png" alt="Annotated staff plate segmentation" class="project-img">
+      </div>
+      <div class="col-md-6">
+        <div class="text-block">
+          <h3>Model Training and Segmentation</h3>
+          <p>Gage-Cam uses a U-Net architecture selected for its ability to generate precise, low-artifact segmentation masks in uncontrolled field conditions. As the model downsamples input images, it gains higher-level semantic understanding while progressively losing spatial detail. To preserve accuracy, U-Net employs skip connections that reintroduce high-resolution features from earlier layers into the upsampling path. This design allows the model to maintain sharp object boundaries while still benefiting from deep contextual reasoning — ideal for detecting staff plate geometry in complex natural environments.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add up to 4 more blocks -->
+    <div class="row project-block align-items-center flex-md-row-reverse">
+      <div class="col-md-6">
+        <img src="/project_assets/Gagecam5.jpg" alt="Example image or visualization" class="project-img">
+      </div>
+      <div class="col-md-6">
+        <div class="text-block">
+          <h3>Installation & Form Factor</h3>
+          <p>Gage-Cam was deployed for a three-day trial on the Neversink River at Godeffroy, NY, during a period of historically low flow. Operating entirely on battery power, the system remained fully self-sufficient throughout the test. Despite difficult lighting and variable flow conditions, the model consistently detected staff plates with high confidence. The trial demonstrated Gage-Cam’s ability to perform reliably in real-world river environments without external power or connectivity.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- GitHub CTA -->
+    <div class="text-center">
+      <a href="https://github.com/USGS-NYWSC-HAIL/gage-cam" target="_blank" class="btn btn-outline-primary mt-4">View on GitHub</a>
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center text-muted">
+    <p class="mb-1">&copy; 2025 Daniel Beckman</p>
+    <a href="/" class="text-decoration-none small text-primary">← Return to Home</a>
   </footer>
-  <!-- Bootstrap JS Bundle (with Popper) -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
